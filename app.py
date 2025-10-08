@@ -18,5 +18,9 @@ def vehiculos():
 def maravillas():
     return render_template("maravillas.html")
 
+@app.route("/acercade")
+def about():
+    return render_template("acercade.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
