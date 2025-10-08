@@ -10,5 +10,9 @@ def index():
 def animales():
     return render_template("animales.html")
 
+@app.route("/vehiculos")
+def vehiculos():
+    return render_template("vehiculos.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
