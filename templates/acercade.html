@@ -1,5 +1,12 @@
 {%extends "base.htnl"%}
 
 {%block contenido%}
-
+<section class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Acerca de</h2>
+            <img src="{{url_for("static", filename="arch.png")}}" class="img-fluid my-2" alt="Captura de pantalla de KDE Plasma">
+        </div>
+    </div>
+</section>
 {%endblock%}
