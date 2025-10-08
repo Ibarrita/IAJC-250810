@@ -14,5 +14,9 @@ def animales():
 def vehiculos():
     return render_template("vehiculos.html")
 
+@app.route("/maravillas")
+def maravillas():
+    return render_template("maravillas.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
