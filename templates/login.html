@@ -3,13 +3,23 @@
 {%block contenido%}
 <main class="container">
     <form>
-        <div class="mb-3">
-            <label for="email" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        <div class="mb-3 row">
+            <div class="col-12 my-1">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            </div>
+            <div class="col-12 my-1">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password">
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password">
+        <div class="mb-3 row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            </div>
+            <div class="col-6">
+                <button type="reset" class="btn btn-primary">Restablecer</button>
+            </div>
         </div>
     </form>
 </main>
