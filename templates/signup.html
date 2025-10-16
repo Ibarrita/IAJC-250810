@@ -2,13 +2,13 @@
 
 {%block contenido%}
 <main class="container">
-    <form>
+    <form method="post" action="/registrarme">
         <div class="mb-3 row">
             <div class="col-6">
-                <input type="text" class="form-control" required placeholder="Nombre">
+                <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Nombre" value={{request.form.get(nombre)}}>
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" required placeholder="Apellido">
+                <input type="text" class="form-control" id="apellido" name="apellido" required placeholder="Apellido" value={{request.form.get(apellido)}}>
             </div>
         </div>
         <div class="mb-3 row">
@@ -37,10 +37,10 @@
         </div>
         <div class="mb-3 row">
             <div class="col-12 my-1">
-                <input type="email" class="form-control" required placeholder="Correo electrónico">
+                <input type="email" class="form-control" id="email" name="email" required placeholder="Correo electrónico" value={{request.form.get(email)}}>
             </div>
             <div class="col-12 my-1">
-                <input type="password" class="form-control" required placeholder="Contraseña">
+                <input type="password" class="form-control" id="password" name="password" required placeholder="Contraseña" value={{request.form.get(password)}}>
             </div>
         </div>
         <div class="mb-3 row">
