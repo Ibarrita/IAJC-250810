@@ -24,21 +24,20 @@ def maravillas():
 def about():
     return render_template("acercade.html")
 
-@app.route("/signup")
+@app.route("/signup", methods=["GET", "POST"])
 def signup():
-    return render_template("signup.html")
-
-@app.route("/login")
-def login():
-    return render_template("login.html")
-
-@app.route("/registrame", methods=("GET", "POST"))
-def registrame():
     if request.method == "POST":
         nombre = request.form["nombre"]
         apellido = request.form["apellido"]
         email = request.form["email"]
         contrasena = request.form["password"]
+        flash("Registro exitoso")
+        return redirect(url_for("index"))
+    return render_template("signup.html")
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
